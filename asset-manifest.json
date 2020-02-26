@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/beautiful/static/css/main.af34b2a4.chunk.css",
+    "main.js": "/beautiful/static/js/main.a0f2375a.chunk.js",
+    "main.js.map": "/beautiful/static/js/main.a0f2375a.chunk.js.map",
+    "runtime-main.js": "/beautiful/static/js/runtime-main.3d048531.js",
+    "runtime-main.js.map": "/beautiful/static/js/runtime-main.3d048531.js.map",
+    "static/css/2.06565635.chunk.css": "/beautiful/static/css/2.06565635.chunk.css",
+    "static/js/2.58a0fdd5.chunk.js": "/beautiful/static/js/2.58a0fdd5.chunk.js",
+    "static/js/2.58a0fdd5.chunk.js.map": "/beautiful/static/js/2.58a0fdd5.chunk.js.map",
+    "index.html": "/beautiful/index.html",
+    "precache-manifest.c56ddde196984ea7ab9614ba932bbc99.js": "/beautiful/precache-manifest.c56ddde196984ea7ab9614ba932bbc99.js",
+    "service-worker.js": "/beautiful/service-worker.js",
+    "static/css/2.06565635.chunk.css.map": "/beautiful/static/css/2.06565635.chunk.css.map",
+    "static/css/main.af34b2a4.chunk.css.map": "/beautiful/static/css/main.af34b2a4.chunk.css.map",
+    "static/js/2.58a0fdd5.chunk.js.LICENSE.txt": "/beautiful/static/js/2.58a0fdd5.chunk.js.LICENSE.txt",
+    "static/media/belle-beauty-JPvy3rrWSeM-unsplash.jpg": "/beautiful/static/media/belle-beauty-JPvy3rrWSeM-unsplash.c57784d0.jpg",
+    "static/media/curology-wK0h-mlvfuc-unsplash.jpg": "/beautiful/static/media/curology-wK0h-mlvfuc-unsplash.b149f939.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3d048531.js",
+    "static/css/2.06565635.chunk.css",
+    "static/js/2.58a0fdd5.chunk.js",
+    "static/css/main.af34b2a4.chunk.css",
+    "static/js/main.a0f2375a.chunk.js"
+  ]
+}
