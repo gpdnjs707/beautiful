@@ -40,10 +40,20 @@ const Content = styled.div`
   display: grid;
   column-gap: 10px;
   row-gap: 10px;
-  grid-template-rows: repeat(3, 400px);
-  grid-template-columns: repeat(3, 1fr);
+
+  @media (min-width: 320px) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 300px);
+  }
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 400px);
+  }
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 400px);
+  }
   padding: 100px;
-  height: 1000px;
 `;
 
 const ImgBox = styled.div`
