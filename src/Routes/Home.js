@@ -18,7 +18,9 @@ const Main_Slide = styled.div`
   height: 100%;
   position: relative;
   background-image: url("https://images.unsplash.com/photo-1503236823255-94609f598e71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
-  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 `;
 
 const Slide_P = styled.p`
@@ -53,7 +55,7 @@ const Content = styled.div`
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 400px);
   }
-  padding: 100px;
+  padding: 100px 5%;
 `;
 
 const ImgBox = styled.div`

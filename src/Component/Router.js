@@ -11,11 +11,12 @@ import About from "../Routes/About";
 import Portfolio from "../Routes/Portfolio";
 import Header from "./Header";
 import ScrollToTop from "./ScrollToTop";
+import Nav from "./Nav";
 
 export default () => (
   <Router>
     <ScrollToTop />
-    <Header />
+    <Nav />
     <Switch>
       <Route path="/" exact component={Home} />
       <Route path="/about" exact component={About} />

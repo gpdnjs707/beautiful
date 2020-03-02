@@ -3,22 +3,12 @@ import styled from "styled-components";
 import { Link, withRouter } from "react-router-dom";
 import "../css/Header.css";
 
-const Header = styled.header`
-  width: 100vw;
-  height: 60px;
-  padding: 0 10px;
-  color: black;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: grid;
-  grid-template-columns: 5% 1fr;
-  align-items: center;
-  z-index: 10;
-  &.navbar1 {
-    background-color: rgba(255, 255, 255, 0.9);
-    -webkit-transition: background-color 0.5s, -webkit-transform 0.5s;
-    transition: width background-color 0.5s, transform 0.5s;
+const MenuWrap = styled.div`
+  width: 100%;
+
+  display: block;
+  @media (max-width: 600px) {
+    display: none;
   }
 `;
 
@@ -55,24 +45,10 @@ const SLink = styled(Link)`
 
 export default withRouter(({ location: { pathname } }) => (
   <>
-    <Header id="nav">
-      <div id="test"></div>
-      <div id="menu">
-        <ul class="links">
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="generic.html">Generic</a>
-          </li>
-          <li>
-            <a href="elements.html">Elements</a>
-          </li>
-        </ul>
-      </div>
-      <SLink to="/">
-        <Logo></Logo>
-      </SLink>
+    <SLink to="/">
+      <Logo></Logo>
+    </SLink>
+    <MenuWrap>
       <List>
         <Item current={pathname === "/"}>
           <SLink to="/">HOME</SLink>
@@ -84,6 +60,6 @@ export default withRouter(({ location: { pathname } }) => (
           <SLink to="/portfolio">PORTFOLIO</SLink>
         </Item>
       </List>
-    </Header>
+    </MenuWrap>
   </>
 ));
