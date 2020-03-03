@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import WithRouter from "./WithRouter";
+import WithRouter from "./WithRouter copy";
 
 const Header = styled.header`
   width: 100vw;
@@ -10,7 +10,7 @@ const Header = styled.header`
   position: fixed;
   top: 0;
   left: 0;
-  display: grid;
+  display: flex;
   grid-template-columns: 25% 1fr;
   align-items: center;
   z-index: 10;
@@ -36,17 +36,51 @@ const MenuIcon = styled.div`
     height: 100%;
     object-fit: cover;
   }
+  &.hidden {
+    display: none;
+  }
 `;
 
 class Nav extends React.Component {
+  state = {
+    isMenuClicked: false,
+    isMenuOpened: false
+  };
+
+  handleMenuClick = () => {
+    const { isMenuClicked, isMenuOpened } = this.state;
+
+    this.setState({
+      isMenuClicked: !isMenuClicked,
+      isMenuOpened: !isMenuOpened
+    });
+  };
+
+  handleMenuClose = () => {
+    const { isMenuClicked, isMenuOpened } = this.state;
+
+    this.setState({
+      isMenuClicked: false,
+      isMenuOpened: false
+    });
+  };
+
   render() {
-    const { menuVisible } = this.props;
+    const { isMenuClicked, isMenuOpened } = this.state;
+    const { handleMenuClick, handleMenuClose } = this;
+
     return (
       <>
-        <div className={menuVisible ? "menu" : null}></div>
-        <Header>
-          <WithRouter />
-          <MenuIcon>
+        <Header id="nav">
+          <WithRouter
+            menuOpen={isMenuOpened}
+            menuClose={handleMenuClick}
+            refresh={handleMenuClose}
+          />
+          <MenuIcon
+            onClick={() => this.handleMenuClick()}
+            className={isMenuClicked ? "hidden" : null}
+          >
             <img src={require("../assets/icons8-menu.png")}></img>
           </MenuIcon>
         </Header>

@@ -9,12 +9,17 @@ const MenuWrap = styled.div`
   display: block;
   @media (max-width: 600px) {
     display: none;
+    width: 200px;
+    height: 400px;
+    background-color: white;
+    position: relative;
+    right: 20px;
   }
 `;
 
 const Logo = styled.div`
   align-self: center;
-  justify-self: center;
+
   width: 40px;
   height: 40px;
   background-image: url("https://images.unsplash.com/photo-1564054074885-e5a7c93671d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
@@ -24,6 +29,11 @@ const Logo = styled.div`
 const List = styled.ul`
   display: flex;
   justify-content: flex-end;
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
 `;
 
 const Item = styled.li`
@@ -42,12 +52,18 @@ const SLink = styled(Link)`
   align-items: center;
   justify-content: center;
 `;
+const LogoLink = styled(Link)`
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+`;
 
 export default withRouter(({ location: { pathname } }) => (
   <>
-    <SLink to="/">
+    <LogoLink to="/">
       <Logo></Logo>
-    </SLink>
+    </LogoLink>
     <MenuWrap>
       <List>
         <Item current={pathname === "/"}>

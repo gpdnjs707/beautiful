@@ -9,7 +9,6 @@ import {
 import Home from "../Routes/Home";
 import About from "../Routes/About";
 import Portfolio from "../Routes/Portfolio";
-import Header from "./Header";
 import ScrollToTop from "./ScrollToTop";
 import Nav from "./Nav";
 

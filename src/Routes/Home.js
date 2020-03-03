@@ -27,8 +27,11 @@ const Slide_P = styled.p`
   font-size: 60px;
   position: relative;
   width: 500px;
-  left: 110px;
+  left: 10%;
   top: 215px;
+  @media (max-width: 600px) {
+    width: 50%;
+  }
 `;
 
 const Img = styled.img`

@@ -40,9 +40,14 @@ const Item = styled.li`
   width: 90px;
   height: 50px;
   text-align: center;
-  border-bottom: 3px solid
-    ${props => (props.current ? "#ff7979" : "transparent")};
+  /* border-bottom: 3px solid
+    ${props => (props.current ? "#ff7979" : "transparent")}; */
+  font-weight: ${props => (props.current ? "bold" : "normal")};
   transition: border-bottom 0.5s ease-in-out;
+  & :hover {
+    font-weight: bold;
+  }
+  
 `;
 
 const SLink = styled(Link)`
